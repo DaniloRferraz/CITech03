@@ -29,9 +29,9 @@ jobs:
 
       - name: Run unit tests
         env:
-          AWS_REGION: ${ { secrets.AWS_REGION } }
-          AWS_SQS_URL: ${ { secrets.AWS_SQS_URL } }
-          AWS_DYNAMODB_TABLE: ${ { secrets.AWS_DYNAMODB_TABLE } }
+          AWS_REGION: ${{ secrets.AWS_REGION }}
+          AWS_SQS_URL: ${{ secrets.AWS_SQS_URL }}
+          AWS_DYNAMODB_TABLE: ${{ secrets.AWS_DYNAMODB_TABLE }}
         run: |
           pytest -v
 
