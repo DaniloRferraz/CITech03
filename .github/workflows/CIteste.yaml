@@ -43,6 +43,11 @@ jobs:
         pip install pylint
     - name: Analysing the code with pylint
       run: |
-        pylint $(git ls-files '*.py')
+        pylint $(git ls-files '*.py') --fail-under=6.0
             
-
+  Scan de vulnerabilidades:
+    runs-on: ubuntu-latest
+    needs: lint
+    steps:
+    - name: SCA (Software Composition Analysis)
+      
