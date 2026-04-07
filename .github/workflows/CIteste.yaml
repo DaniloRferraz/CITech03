@@ -67,7 +67,7 @@ jobs:
         exit-code: 1
     
     - name: Static Application Security Testing
-      uses: sonarsource/sonarcloud-github-action@4.0.0
+      uses: sonarsource/sonarcloud-github-action@v4.0.0
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
