@@ -97,9 +97,8 @@ jobs:
         aws-region: us-east-1
 
     - name: Construindo imagem Docker
-      working-directory: pipeline/CITech03/
       run: |
-        docker build -t analytics-service:latest .
+        docker build -t analytics-service:latest pipeline/CITech03
 
     - name: Software Composition Analysis - Trivy
       uses: aquasecurity/trivy-action@master
