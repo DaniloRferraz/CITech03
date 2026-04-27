@@ -1,12 +1,7 @@
 name: CI analytics-service
 
 on:
-    push:
-        branches:
-            - main
-    pull_request:
-        branches:
-            - main
+ workflow_dispatch:
 
 jobs:
   build-test:
@@ -68,10 +63,13 @@ jobs:
         ignore-unfixed: true
         exit-code: 1
     
-    - name: Static Application Security Testing
-      uses: SonarSource/sonarqube-scan-action@v5
+    - name: SonarCloud Scan
+      uses: SonarSource/sonarcloud-github-action@master
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        SONAR_projectKey: ${{ secrets.SONAR_projectKey }}
-        SONAR_organization: ${{ secrets.SONAR_organization }}
+      with:
+        args: >
+         -Dsonar.projectKey=danilorferraz
+         -Dsonar.organization=Danilo Ferraz
+
 
