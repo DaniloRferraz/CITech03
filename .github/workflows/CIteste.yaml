@@ -96,15 +96,9 @@ jobs:
         aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
         aws-region: us-east-1
 
-    
-    - name: Debug (use uma vez)
-      run: |
-        pwd
-        ls -R
-
     - name: Construindo imagem Docker
       run: |
-        docker build -t analytics-service:latest pipeline/CITech03
+        docker build -t analytics-service:latest .
 
     - name: Software Composition Analysis - Trivy
       uses: aquasecurity/trivy-action@master
