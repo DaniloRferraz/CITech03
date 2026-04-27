@@ -97,7 +97,7 @@ jobs:
         aws-region: us-east-1
 
     - name: Construindo imagem Docker
-      working-directory: ./pipeline
+      working-directory: .
       run: |
         docker build -t analytics-service:latest .
 
