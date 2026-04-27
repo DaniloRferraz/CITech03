@@ -70,6 +70,6 @@ jobs:
       with:
         args: >
          -Dsonar.projectKey=danilorferraz
-         -Dsonar.organization=Danilo Ferraz
+         -Dsonar.organization=danilorferraz
 
 
