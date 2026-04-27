@@ -97,7 +97,7 @@ jobs:
         aws-region: us-east-1
 
     - name: Construindo imagem Docker
-      working-directory: .
+      working-directory: ./pipeline/CITech03/
       run: |
         docker build -t analytics-service:latest .
 
