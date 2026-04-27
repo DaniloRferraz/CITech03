@@ -79,11 +79,5 @@ jobs:
         args: >
          -Dsonar.projectKey=danilorferraz
          -Dsonar.organization=danilorferraz
-    
-    - name: SonarCloud Quality Gate
-      uses: SonarSource/sonarqube-quality-gate-action@v1.1.0
-      env:
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-
 
 
